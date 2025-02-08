@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Vape Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <script src="search.js" defer></script>
+
+</head>
+<body>
+
+        <!-- Age Verification Popup -->
+        <div id="age-verification">
+            <div class="popup">
+                <h1>Are You 21 or Older?</h1>
+                <p>This site contains products intended for adults only. Please confirm your age.</p>
+                <button class="verify" onclick="grantAccess()">I Verify</button>
+                <button class="no-access" onclick="denyAccess()">I'm Not</button>
+            </div>
+        </div>
+
+
+        <!-- Content of my page-->
+    <header>
+        <nav>
+            <div class="logo">
+                <span>CLOUD HAVEN</span>
+                <a href="products.html" class="nav-item">Products</a>
+                <a href="brands.html" class="nav-item">Brands</a>
+                <a href="#gamercards" class="nav-item">About Us</a>
+                <a href="#leaderboard" class="nav-item">Blog</a>
+                <a href="#reviews" class="nav-item">Contact Us</a>
+                
+            </div>
+            <div class="auth-links">
+                <a href="#" id="search-button" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="#signup" class="signup">Sign Up / Log In</a>
+            </div>
+            <div id="search-box" class="hidden">
+                <input type="text" id="search-input" placeholder="Start typing to search the site...">
+                <button id="clear-search">✖</button>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <div class="slideshow">
+        <img src="images/01.png" alt="Slide 1" class="active">
+        <img src="images/02.png" alt="Slide 2">
+        <img src="images/03.png" alt="Slide 3">
+    </div>
+
+    <section class="hero">
+        <h1>Cloud Haven: Your Premium Vape & CBD Shop</h1>
+        <p>Explore top-quality vapes, CBD, gummies, water pipes, bongs, and more—all in one place for your ultimate relaxation and enjoyment!</p>
+        <button id="get-started">Shop Now!</button>
+    </section>
+
+
+    <section class="product-section">
+        <div class="container">
+            <div class="product-card">
+                <img src="images/Pic1 (2).png" alt="Product 1" class="product-image">
+                <h2>Shop Our Full Line Of Products</h2>
+                <p>Top Brand Name Bongs, Dab Rigs, Bubblers, Headies, Hand Pipes, Vaporizers, E-Nails, Apparel, and More!</p>
+                <a href="#" class="shop-button">Shop</a>
+            </div>
+            <div class="product-card">
+                <img src="images/Pic2 (2).png" alt="Product 2" class="product-image">
+                <h2>Shop All Products Under $100</h2>
+                <p>Great Gift Ideas for the Holidays! Bangers, Hand Pipes, Mats, Mugs, Pendants, Ash Catchers, etc.!</p>
+                <a href="#" class="shop-button">Shop</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h1 class="section-title">Best Sellers</h1>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/F1.webp" alt="Aztec Retro Rainbow">
+                <h2>Aztec Retro Rainbow Circle Wig-Wag Decal Beaker Bong (11")</h2>
+                <p class="price">$39.99</p>
+                <p class="more-colors">more colors</p>
+            </div>
+            <div class="product-card">
+                <img src="images/F2.webp" alt="Clear 8-Arm Tree Perc">
+                <h2>Clear 8-Arm Tree Perc Bubbler Rig (8")</h2>
+                <p class="price">$49.99</p>
+                <p class="more-colors">more colors</p>
+            </div>
+            <div class="product-card">
+                <img src="images/F3.webp" alt="7mm Color Accent">
+                <h2>7mm Color Accent Classic Beaker Bong (12")</h2>
+                <p class="price">$69.99</p>
+                <p class="more-colors">more colors</p>
+            </div>
+            <div class="product-card">
+                <img src="images/F4.webp" alt="Tsunami Glass Beaker">
+                <h2>Tsunami Glass - Beaker Base Ice Catcher Water Pipe (15")</h2>
+                <p class="price">$75.00</p>
+                <p class="more-colors">more colors</p>
+            </div>
+            <div class="product-card">
+                <img src="images/F5.webp" alt="Tsunami Glass UFO Pyramid">
+                <h2>Tsunami Glass - UFO Pyramid (15")</h2>
+                <p class="price">$135.00</p>
+                <p class="more-colors">more colors</p>
+            </div>
+        </div>
+        <button class="show-more">Show More</button>
+    </section>
+
+    <script>
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentIndex = 0;
+
+        function showNextSlide() {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 3000);
+    </script>
+
+<script>
+    // Grant access and hide the popup
+    function grantAccess() {
+        document.getElementById('age-verification').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+
+    // Deny access and redirect or block page
+    function denyAccess() {
+        alert('Sorry, you must be 21 or older to access this site.');
+        window.location.href = "https://www.google.com"; // Redirect to another page
+    }
+</script>
+
+<!-- footer  code! -->
+<footer class="footer-section">
+    <div class="footer-banner">
+        FREE SHIPPING ON ALL ORDERS OVER $50 SHOP NOW
+    </div>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Categories</h4>
+            <ul>
+                <li>What's New!</li>
+                <li>Products Under $100</li>
+                <li>Bongs</li>
+                <li>Dab Rigs</li>
+                <li>Heady American Glass</li>
+                <li>Hand Pipes</li>
+                <li>Bubblers / Sherlocks</li>
+                <li>Bangers / Nails</li>
+                <li>Bowls / Slides</li>
+                <li>Grinders</li>
+                <li>Bubble Caps & Carbs</li>
+                <li>Pendants and Jewelry</li>
+                <li>Marbles & Pearls</li>
+                <li>Dabbing Torches</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Need Some Help?</h4>
+            <ul>
+                <li>Contact Us</li>
+                <li>Blog</li>
+                <li>Hours of Operation</li>
+                <li>Monday-Saturday: 10:00am-9:00pm</li>
+                <li>Sunday: 12:00pm-6:00pm</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Information</h4>
+            <ul>
+                <li>Privacy Policy</li>
+                <li>Refund and Return Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Giveaways!</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Stay Connected</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+            <h4>Newsletter Sign Up</h4>
+            <form>
+                <input type="email" placeholder="enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr>
+        <p>© 2022 Smoke Haven. All Rights Reserved.</p>
+        <div class="payment-icons">
+            <img src="https://via.placeholder.com/50x30?text=Visa" alt="Visa">
+            <img src="https://via.placeholder.com/50x30?text=AmEx" alt="American Express">
+            <img src="https://via.placeholder.com/50x30?text=MasterCard" alt="MasterCard">
+            <img src="https://via.placeholder.com/50x30?text=Discover" alt="Discover">
+        </div>
+        <img class="verified-badge" src="https://via.placeholder.com/100x50?text=Verified+Merchant" alt="Verified Merchant">
+    </div>
+</footer>
+
+</body>
+</html>
