@@ -1,3 +1,17 @@
+<!-- 
+    index.html - Home Page
+    ----------------------
+    This is the main landing page of the website.
+    It introduces visitors to the platform and provides navigation to other sections.
+
+    Scope:
+    - Displays featured products, promotions, and key brand highlights.
+    - Includes navigation links to Products, Brands, Blog, Contact, etc.
+    - May contain interactive elements like search, login/signup, and banners.
+    - Serves as the central hub for user interaction before exploring further.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,63 +71,81 @@
     <section class="hero">
         <h1>Cloud Haven: Your Premium Vape & CBD Shop</h1>
         <p>Explore top-quality vapes, CBD, gummies, water pipes, bongs, and more—all in one place for your ultimate relaxation and enjoyment!</p>
-        <button id="get-started">Shop Now!</button>
+
+        <a href="products.html" class="shop-button">Shop Now!</a>
+            
     </section>
 
 
-    <section class="product-section">
+    <section class="product-section"> 
         <div class="container">
             <div class="product-card">
                 <img src="images/F1.webp" alt="Product 1" class="product-image">
                 <h2>Shop Our Full Line Of Products</h2>
                 <p>Top Brand Name Bongs, Dab Rigs, Bubblers, Headies, Hand Pipes, Vaporizers, E-Nails, Apparel, and More!</p>
-                <a href="#" class="shop-button">Shop</a>
+                <a href="products.html" class="shop-button">Shop</a>
             </div>
             <div class="product-card">
                 <img src="images/F2.webp" alt="Product 2" class="product-image">
                 <h2>Shop All Products Under $100</h2>
                 <p>Great Gift Ideas for the Holidays! Bangers, Hand Pipes, Mats, Mugs, Pendants, Ash Catchers, etc.!</p>
-                <a href="#" class="shop-button">Shop</a>
+                <a href="products.html" class="shop-button">Shop</a>
             </div>
         </div>
     </section>
+    
 
     <section class="featured-products">
         <h1 class="section-title">Best Sellers</h1>
         <div class="products-grid">
-            <div class="product-card">
-                <img src="images/F1.webp" alt="Aztec Retro Rainbow">
-                <h2>Aztec Retro Rainbow Circle Wig-Wag Decal Beaker Bong (11")</h2>
-                <p class="price">$39.99</p>
-                <p class="more-colors">more colors</p>
-            </div>
-            <div class="product-card">
-                <img src="images/F2.webp" alt="Clear 8-Arm Tree Perc">
-                <h2>Clear 8-Arm Tree Perc Bubbler Rig (8")</h2>
-                <p class="price">$49.99</p>
-                <p class="more-colors">more colors</p>
-            </div>
-            <div class="product-card">
-                <img src="images/F3.webp" alt="7mm Color Accent">
-                <h2>7mm Color Accent Classic Beaker Bong (12")</h2>
-                <p class="price">$69.99</p>
-                <p class="more-colors">more colors</p>
-            </div>
-            <div class="product-card">
-                <img src="images/F4.webp" alt="Tsunami Glass Beaker">
-                <h2>Tsunami Glass - Beaker Base Ice Catcher Water Pipe (15")</h2>
-                <p class="price">$75.00</p>
-                <p class="more-colors">more colors</p>
-            </div>
-            <div class="product-card">
-                <img src="images/F5.webp" alt="Tsunami Glass UFO Pyramid">
-                <h2>Tsunami Glass - UFO Pyramid (15")</h2>
-                <p class="price">$135.00</p>
-                <p class="more-colors">more colors</p>
-            </div>
+            <a href="details.html?product=Product1" class="product-link">
+                <div class="product-card">
+                    <img src="images/F1.webp" alt="Aztec Retro Rainbow">
+                    <h2>Aztec Retro Rainbow Circle Wig-Wag Decal Beaker Bong (11")</h2>
+                    <p class="price">$39.99</p>
+                    <p class="more-colors">more colors</p>
+                </div>
+            </a>
+            
+            <a href="details.html?product=Product2" class="product-link">
+                <div class="product-card">
+                    <img src="images/F2.webp" alt="Clear 8-Arm Tree Perc">
+                    <h2>Clear 8-Arm Tree Perc Bubbler Rig (8")</h2>
+                    <p class="price">$49.99</p>
+                    <p class="more-colors">more colors</p>
+                </div>
+            </a>
+    
+            <a href="details.html?product=Product3" class="product-link">
+                <div class="product-card">
+                    <img src="images/F3.webp" alt="7mm Color Accent">
+                    <h2>7mm Color Accent Classic Beaker Bong (12")</h2>
+                    <p class="price">$69.99</p>
+                    <p class="more-colors">more colors</p>
+                </div>
+            </a>
+    
+            <a href="details.html?product=Product4" class="product-link">
+                <div class="product-card">
+                    <img src="images/F4.webp" alt="Tsunami Glass Beaker">
+                    <h2>Tsunami Glass - Beaker Base Ice Catcher Water Pipe (15")</h2>
+                    <p class="price">$75.00</p>
+                    <p class="more-colors">more colors</p>
+                </div>
+            </a>
+    
+            <a href="details.html?product=Product5" class="product-link">
+                <div class="product-card">
+                    <img src="images/F5.webp" alt="Tsunami Glass UFO Pyramid">
+                    <h2>Tsunami Glass - UFO Pyramid (15")</h2>
+                    <p class="price">$135.00</p>
+                    <p class="more-colors">more colors</p>
+                </div>
+            </a>
         </div>
         <button class="show-more">Show More</button>
     </section>
+    
 
     <script>
         const slides = document.querySelectorAll('.slideshow img');

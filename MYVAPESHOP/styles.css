@@ -180,6 +180,25 @@ button#get-started:hover {
     background-color: #3a9fd9;
 }
 
+/* shop now button */
+.shop-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.shop-button:hover {
+    background-color: #cc5500;
+}
+/* shop now button */
+
 
 /* Search container styles */
 /* Search button styles */
@@ -312,6 +331,11 @@ button#get-started:hover {
 
     /* New featured section CSS */ 
 
+    .product-link {
+        text-decoration: none; /* Removes link underline */
+        color: inherit; /* Keeps text color normal */
+        display: block; /* Ensures block-level behavior */
+    }
     .product-section {
         background: url('images/CityWallpaper.jpg') no-repeat center center/cover;
         padding: 50px 0;
@@ -326,6 +350,8 @@ button#get-started:hover {
         margin: 0 auto;
         padding: 20px;
     }
+
+    /* This also for products.html */
     
     .product-card {
         background: rgba(0, 0, 0, 0.8);
@@ -334,7 +360,10 @@ button#get-started:hover {
         text-align: center;
         padding: 20px;
         width: 45%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer; /* Shows clickable pointer */
     }
+
     
     .product-card h2 {
         font-size: 1.5rem;
@@ -346,12 +375,22 @@ button#get-started:hover {
         margin-bottom: 20px;
     }
     
-    .product-image {
+    /* .product-image {
         max-width: 100%;
         height: auto;
         margin-bottom: 20px;
         border-radius: 10px;
+    } */
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px; /* Adjust the height based on your preference */
+        object-fit: contain; /* Ensures the image scales properly */
+        margin-bottom: 20px;
+        border-radius: 10px;
     }
+    
     
     .shop-button {
         display: inline-block;
@@ -398,31 +437,67 @@ button#get-started:hover {
     justify-items: center;
 }
 
-.featured-products .product-card {
+/* .featured-products .product-card {
     background: #fff;
     border: 1px solid #ddd;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
-    padding: 2px;
+    /* padding: 2px;
     max-width: 80%; /* Stretch cards */
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */ 
+
+.featured-products .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Increased padding */
+    max-width: 90%; /* Make cards slightly wider */
+    min-height: 400px; /* Increase card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures spacing is balanced */
+    height: 100%; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.featured-products .product-card img {
-    width: 80%; /* Adjust image width to match larger cards */
+
+
+/* .featured-products .product-card img {
+    width: 80%; 
     height: auto;
-    margin-bottom: 15px; /* Reduced space below the image */
+    margin-bottom: 15px; 
     border-radius: 10px;
+} */
+
+.featured-products .product-card img {
+    width: 80%;
+    height: auto;
+    max-height: 200px; /* Restrict height */
+    object-fit: contain; /* Prevents image distortion */
+    margin-bottom: 10px;
 }
 
-.featured-products .product-card h2 {
-    font-size: 1.2rem; /* Slightly larger text */
+
+/* .featured-products .product-card h2 {
+    font-size: 1.2rem; 
     font-weight: bold;
-    margin: 10px 0; /* Reduced space above and below title */
+    margin: 10px 0;
     color: #333;
     line-height: 1.4;
+} */
+
+.featured-products .product-card h2 {
+    font-size: 1rem; /* Reduce font size slightly */
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.3;
 }
+
 
 .featured-products .product-card .price {
     font-size: 1.4rem; /* Emphasized pricing */
@@ -442,7 +517,7 @@ button#get-started:hover {
 }
 
 .featured-products .show-more {
-    margin-top: 20px;
+    margin-top: 50px;
     padding: 10px 20px;
     font-size: 1.2rem;
     color: #fff;
@@ -456,6 +531,13 @@ button#get-started:hover {
 .featured-products .show-more:hover {
     background-color: #555;
 }
+
+/* End of the Feartured products */
+
+
+
+
+
 
 /* Footer Section */
 .footer-section {
@@ -719,7 +801,9 @@ form button:hover {
     cursor: pointer;
 }
 
-/* Products Section */
+
+
+/* For the product pg CSS */
 .products-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -729,14 +813,29 @@ form button:hover {
     padding: 0 20px;
 }
 
-.product-card {
+/* .product-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     text-align: center;
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.product-card {
+    background: white;
+    color: #fff; /* Ensures text is visible */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    width: 45%;
+    min-height: 300px; /* Ensures enough space for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 
 .product-card img {
     width: 100%;
@@ -745,10 +844,23 @@ form button:hover {
     margin-bottom: 10px;
 }
 
-.product-card h2 {
+/* .product-card h2 {
     font-size: 1.2rem;
     margin: 10px 0;
+} */
+
+.product-card h2 {
+    font-size: 1.5rem;
+    color: #333; /* Dark gray for softer contrast */
+    margin: 10px 0;
 }
+
+.product-card p {
+    font-size: 1rem;
+    color: #444; /* Slightly lighter than h2 */
+    margin-bottom: 20px;
+}
+
 
 .product-card .price {
     font-size: 1rem;
@@ -792,9 +904,18 @@ form button:hover {
 
 
 /* CSS for details.html */
+
+/* Only applies when inside details.html */
+body.details-page .product-details {
+    margin-top: 100px;
+}
+
+
+/* Add space only for product details section */
 .product-details {
     max-width: 1200px;
-    margin: 40px auto;
+    /* margin-top: 100px; Pushes the section down */
+    margin: 40px auto; /* Keeps spacing below */
     padding: 20px;
 }
 
@@ -808,10 +929,22 @@ form button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.product-image img {
+/* .product-image img {
     max-width: 100%;
     border-radius: 10px;
+} */
+
+.product-image img {
+    max-width: 100%;
+    max-height: 300px; /* Adjust max height */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Prevents image distortion */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
+
 
 .product-info {
     flex: 1;
@@ -821,11 +954,13 @@ form button:hover {
 .product-info h1 {
     font-size: 2rem;
     font-weight: bold;
+    color: #000;
 }
 
 .product-info p {
     font-size: 1rem;
     margin: 10px 0;
+    color: black
 }
 
 .add-to-cart {

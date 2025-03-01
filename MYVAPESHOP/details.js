@@ -1,41 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Get product name from URL
     const urlParams = new URLSearchParams(window.location.search);
-    const productName = urlParams.get("product");
+    const productKey = urlParams.get("product");
 
-    // Mock Product Data
+    // Product details object (update with your actual data)
     const productData = {
         "Product1": {
-            name: "Product 1",
-            price: "$25.00",
-            image: "images/F1.webp",
-            description: "High-quality glass bong with a sleek design.",
-            material: "Borosilicate Glass",
-            dimensions: "12 inches tall"
+            name: "Aztec Retro Rainbow Circle Wig-Wag Decal Beaker Bong (11\")",
+            price: "$39.99",
+            description: "This stylish beaker bong features an Aztec-inspired design, durable glass, and smooth airflow.",
+            material: "High-quality Borosilicate Glass",
+            dimensions: "Height: 11 inches",
+            image: "images/F1.webp"
         },
         "Product2": {
-            name: "Product 2",
-            price: "$35.00",
-            image: "images/F2.webp",
-            description: "Smooth hitting dab rig with a unique percolator.",
-            material: "Quartz",
-            dimensions: "10 inches tall"
+            name: "Clear 8-Arm Tree Perc Bubbler Rig (8\")",
+            price: "$49.99",
+            description: "A premium bubbler rig with an 8-arm tree percolator for smoother hits.",
+            material: "Borosilicate Glass",
+            dimensions: "Height: 8 inches",
+            image: "images/F2.webp"
         },
         "Product3": {
-            name: "Product 3",
-            price: "$50.00",
-            image: "images/03.png",
-            description: "Premium hand pipe with intricate color work.",
-            material: "Hand-blown Glass",
-            dimensions: "6 inches long"
+            name: "7mm Color Accent Classic Beaker Bong (12\")",
+            price: "$69.99",
+            description: "A thick-walled beaker bong with colorful accents and great durability.",
+            material: "7mm Borosilicate Glass",
+            dimensions: "Height: 12 inches",
+            image: "images/F3.webp"
         }
     };
 
-    if (productData[productName]) {
-        document.getElementById("product-name").innerText = productData[productName].name;
-        document.getElementById("product-price").innerText = productData[productName].price;
-        document.getElementById("product-image").src = productData[productName].image;
-        document.getElementById("product-description").innerText = productData[productName].description;
-        document.getElementById("product-material").innerText = "Material: " + productData[productName].material;
-        document.getElementById("product-dimensions").innerText = "Dimensions: " + productData[productName].dimensions;
+    // Check if the product exists
+    if (productKey in productData) {
+        document.getElementById("product-name").textContent = productData[productKey].name;
+        document.getElementById("product-price").textContent = productData[productKey].price;
+        document.getElementById("product-description").textContent = productData[productKey].description;
+        document.getElementById("product-material").textContent = "Material: " + productData[productKey].material;
+        document.getElementById("product-dimensions").textContent = "Dimensions: " + productData[productKey].dimensions;
+        document.getElementById("product-image").src = productData[productKey].image;
+        document.getElementById("product-image").alt = productData[productKey].name;
+    } else {
+        document.querySelector(".product-details").innerHTML = "<h1>Product not found</h1>";
     }
 });

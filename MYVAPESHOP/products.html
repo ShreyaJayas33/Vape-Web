@@ -1,3 +1,18 @@
+<!-- 
+    product.html - Product Gallery Page
+    -----------------------------------
+    This page displays a gallery of products available for purchase.
+    It provides sorting, filtering, and search options for better user navigation.
+
+    Scope:
+    - Lists all available products with images, names, and prices.
+    - Each product links to `details.html` for more information.
+    - Includes sorting options (price, popularity, new arrivals).
+    - Implements pagination for browsing large inventories.
+    - Contains a product gallery with categorized sections.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,34 +67,37 @@
     </section>
 
     <!-- Products List -->
-    <section class="products-list">
-        <div class="product-card">
-            <a href="details.html?product=Product1">
-                <img src="images/F1.webp" alt="Product 1">
-            </a>
-            <h2>Product 1</h2>
-            <p class="price">$25.00</p>
-            <a href="details.html?product=Product1" class="details-link">View Details</a>
-        </div>
+   
+    <!-- Products List -->
+<section class="products-list">
+    <div class="product-card" data-product="Product1">
+        <a href="details.html?product=Product1">
+            <img src="images/F1.webp" alt="Product 1">
+        </a>
+        <h2 class="product-name"></h2> <!-- Name will be inserted via JS -->
+        <p class="price"></p> <!-- Price will be inserted via JS -->
+        <a href="details.html?product=Product1" class="details-link">View Details</a>
+    </div>
 
-        <div class="product-card">
-            <a href="details.html?product=Product2">
-                <img src="images/F2.webp" alt="Product 2">
-            </a>
-            <h2>Product 2</h2>
-            <p class="price">$35.00</p>
-            <a href="details.html?product=Product2" class="details-link">View Details</a>
-        </div>
+    <div class="product-card" data-product="Product2">
+        <a href="details.html?product=Product2">
+            <img src="images/F2.webp" alt="Product 2">
+        </a>
+        <h2 class="product-name"></h2>
+        <p class="price"></p>
+        <a href="details.html?product=Product2" class="details-link">View Details</a>
+    </div>
 
-        <div class="product-card">
-            <a href="details.html?product=Product3">
-                <img src="images/03.png" alt="Product 3">
-            </a>
-            <h2>Product 3</h2>
-            <p class="price">$50.00</p>
-            <a href="details.html?product=Product3" class="details-link">View Details</a>
-        </div>
-    </section>
+    <div class="product-card" data-product="Product3">
+        <a href="details.html?product=Product3">
+            <img src="images/F3.webp" alt="Product 3">
+        </a>
+        <h2 class="product-name"></h2>
+        <p class="price"></p>
+        <a href="details.html?product=Product3" class="details-link">View Details</a>
+    </div>
+</section>
+
 
     <!-- Pagination -->
     <section class="pagination">

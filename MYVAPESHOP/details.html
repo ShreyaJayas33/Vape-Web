@@ -1,3 +1,18 @@
+<!-- 
+    details.html - Product Details Page
+    -----------------------------------
+    This page displays detailed information about a selected product.
+    It dynamically loads product data (name, price, description, image, material, dimensions) 
+    based on the URL parameter (?product=ProductX).
+    
+    Scope:
+    - Fetches product details from JavaScript (`details.js`).
+    - Ensures a structured layout for product images and specifications.
+    - Provides an "Add to Cart" button for potential e-commerce functionality.
+    - Prevents content overlap with the navigation bar.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +27,7 @@
     <script src="details.js" defer></script>
 
 </head>
-<body>
+<body class = "details-page">
     <header>
         <nav>
             <div class="logo">
@@ -35,6 +50,7 @@
             
         </nav>
     </header>
+
 
     <section class="product-details">
         <div class="details-container">

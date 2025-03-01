@@ -1,0 +1,528 @@
+html,
+body {
+	font-size: 13px;
+	color: #000
+}
+
+body {
+	font-size: 100%
+}
+
+a,
+.blog-detail .user-tags li {
+	color: #000
+}
+
+.page-header h2,
+.page-header h1 {
+	color: #000;
+	text-align: center
+}
+
+.breadcrumb a,
+.breadcrumb span {
+	color: #000;
+	text-transform: lowercase
+}
+
+.site-header.on,
+body {
+	background: #fff;
+	background-position: left top;
+	background-repeat: repeat;
+	background-attachment: scroll
+}
+
+.header-top {
+	background: #000;
+	color: #fff
+}
+
+.header-top a.link {
+	color: #fff;
+	border-bottom: 1px solid #ffffff
+}
+
+.site-header p.text_order {
+	color: #141414
+}
+
+.header-bottom {
+	background: #fff
+}
+
+.header-bottom .selectize-dropdown,
+.header-bottom .selectize-input,
+.header-bottom .selectize-input input,
+.header-panel-bottom .free_shipping {
+	color: #000
+}
+
+.header-bottom .selectize-control.single .selectize-input:after {
+	border-top-color: #000
+}
+
+.customer-area .dropdown-menu a,
+.header-bottom .top-cart a,
+.customer-links a,
+.customer-links {
+	color: #000
+}
+
+.customer-area .dropdown-menu a:hover,
+.header-bottom .top-cart a:hover span.first,
+.header-bottom .top-cart a:focus span.first,
+.customer-links a:hover {
+	border-bottom: 1px solid #000000
+}
+
+.header-bottom .search-bar input.input-group-field {
+	background: #fff;
+	border-color: #000;
+	color: #000
+}
+
+.header-bottom .top-cart a #cartCount {
+	background: #fff
+}
+
+.header-bottom.on .top-cart a #cartCount {
+	background: #000
+}
+
+.header-bottom.on .top-cart a span.first {
+	border-color: #000
+}
+
+.site-footer {
+	background: #fff;
+	background: url(//highrollersmoke.com/cdn/shop/t/9/assets/bg-footer.png?v=80667493468415409271570501277);
+	background-position: center top;
+	background-repeat: repeat;
+	background-attachment: scroll
+}
+
+.footer-bottom {
+	border-color: #000
+}
+
+.footer-top h3,
+.site-footer a,
+.footer-bottom address,
+.site-footer a:hover {
+	color: #000
+}
+
+.site-footer .col-1 a:hover,
+.site-footer .col-2 a:hover,
+.site-footer .col-3 a:hover {
+	border-bottom: 1px solid #000000
+}
+
+.nav-bar {
+	background-color: #fff
+}
+
+.site-nav>li>a {
+	color: #212121
+}
+
+.site-nav>li:hover>a,
+.site-nav>li:hover>a:hover {
+	color: #ab8915
+}
+
+.site-nav li.dropdown .icon-dropdown {
+	border-top-color: #212121
+}
+
+.site-nav>li:hover>a>span:first-child,
+.site-nav>li:hover>a.current>span:first-child {
+	border-color: #ab8915
+}
+
+.site-nav>li>a.current>span:first-child {
+	border-color: #212121
+}
+
+.site-nav-dropdown {
+	border-style: solid;
+	border-color: #fff;
+	background: #fff
+}
+
+.site-nav .widget-featured-product .widget-title h3,
+.site-nav a,
+.site-nav-dropdown li a {
+	color: #000
+}
+
+.site-nav-dropdown li:hover>a {
+	color: #1e1e1e
+}
+
+.site-nav-dropdown li:hover>a:before {
+	background: #1e1e1e
+}
+
+.site-nav-dropdown li.dropdown .icon-dropdown {
+	border-top-color: #000
+}
+
+.site-nav .widget-featured-product .btn {
+	color: #000;
+	border-bottom-color: #000
+}
+
+.home-instagram {
+	background-color: #fff
+}
+
+.product-title {
+	text-transform: capitalize
+}
+
+.products-grid .grid-item-border .product-image,
+.grid-item-border.product-img-box .product-photo-container {
+	border-color: #ab8915
+}
+
+.btn,
+.btn-secondary,
+.text-continue a,
+.spr-summary-actions a,
+#get-rates-submit,
+.infinite-scrolling a,
+.infinite-scrolling-homepage a {
+	font-size: 13px
+}
+
+.btn,
+.btn-secondary,
+.text-continue a:hover,
+.product-item .btn:hover,
+.list-category .view:hover,
+.collection-title a.btn:hover,
+.list-category .grid-item:hover .collection-title a.btn,
+#mc_embed_signup .input-group-btn .btn:hover,
+.btn.spr-button:hover,
+#get-rates-submit:hover,
+#create_customer .action-btn input:hover,
+.template-customers-addresses .grid .large--right a:hover,
+.content-blog .list-blog .button a:hover,
+.quick-view .product-shop .btn,
+.ajax-success-modal .btn-secondary:hover,
+.infinite-scrolling a:hover,
+.infinite-scrolling-homepage a:hover {
+	border-radius: 3px;
+	background-color: #000;
+	color: #fff;
+	border-color: #000
+}
+
+.btn:hover,
+.btn-secondary:hover,
+.text-continue a,
+.product-item .btn,
+.list-category .view,
+.collection-title a.btn,
+#mc_embed_signup .input-group-btn .btn,
+.spr-summary-actions a,
+.spr-form-actions .btn:hover,
+.btn.spr-button,
+#get-rates-submit,
+#create_customer .action-btn input,
+.template-customers-addresses .grid .large--right a,
+.ajax-success-modal .btn-secondary,
+.infinite-scrolling a,
+.infinite-scrolling-homepage a {
+	border-radius: 3px;
+	background-color: #171717;
+	color: #fff;
+	border-color: #171717
+}
+
+.btn span.arrow,
+.btn:hover span.arrow {
+	border-left-color: #fff
+}
+
+.spr-form-actions .btn,
+.spr-summary-actions a:hover {
+	background-color: #000;
+	color: #fff;
+	border-color: #000
+}
+
+.product-item .btn,
+.list-category .view {
+	background-color: transparent
+}
+
+.widget-featured-product .btn,
+.content-blog .list-blog .button a,
+.quick-view .product-shop .btn:hover,
+.product-shop #add-to-cart-form .btn:hover,
+.cart-row .btn:hover,
+#dropdown-cart .actions .btn:hover {
+	border-color: #171717;
+	background-color: #171717;
+	color: #fff
+}
+
+label,
+.spr-icon,
+.widget-title fieldset.box-title legend,
+.home-instagram .widget-title h3,
+.sidebar .widget-title,
+.related-products h2,
+.recently-viewed-products h2,
+.refined-widgets>span,
+.tab-content h4,
+.tab-content .spr-form-title,
+.tab-content .spr-review .spr-review-header-title,
+.tab-content .spr-review .spr-review-header-byline,
+#email-modal .window-window .window-content .title,
+#email-modal .window-window .window-content .message,
+.cart-list .price,
+#shipping-calculator h3,
+#add-comment-title,
+.title-comment,
+.lookbook-slideshow {
+	color: #000
+}
+
+.product-shop .product-infor label {
+	color: #000
+}
+
+blockquote,
+small,
+.header-mobile .dropdown-menu,
+.footer-top h3,
+.sidebar-custom .widget-title h3 span,
+.sidebar-custom .widget-title h3 a,
+.tab-content .spr-review-content-body,
+.toolbar.toolbar-bottom .page-total,
+.dropdown-menu>li>a,
+.panel-group .panel-title,
+.panel-group .panel-body h4,
+.tab-content h4,
+.tab-content .spr-form-label,
+.tab-content .spr-review .spr-review-header-byline {
+	font-size: 13px
+}
+
+#dropdown-cart .text-cart a,
+.product-label strong,
+.cart-row label.add-comments span:first-child {
+	font-size: 11px
+}
+
+.quickview-button a,
+.widget-tags li a,
+.header-top,
+.header-panel-bottom .free_shipping,
+#dropdown-cart .summary .label,
+.newsletter .input-group-btn>.btn,
+.site-nav .widget-featured-product .btn,
+.spr-summary-actions a,
+.toolbar,
+.cart-title h2,
+.cart-list input.update,
+.cart-list a.remove,
+.cart-row .total-price h3,
+.swatch label,
+.product-shop .product-infor label,
+#email-modal .window-window .window-content .message {
+	font-size: 12px
+}
+
+.free-shipping h3,
+.price-box,
+.cart-list .price {
+	font-size: 14px
+}
+
+.refined-widgets>span,
+.widget-title h3,
+.cart-row .btn,
+.contact-form .location h4,
+.product-shop .total-price>span,
+.related-products h2,
+.recently-viewed-products h2,
+#shipping-calculator h3,
+#customer_login .page-header h1,
+.grid-item h3,
+.tab-content .spr-form-title,
+.tab-content .spr-review .spr-review-header-title {
+	font-size: 15px
+}
+
+#dropdown-cart .summary .price,
+.product-shop .prices .compare-price {
+	font-size: 17px
+}
+
+.page-header h2,
+.page-header h1,
+.home-instagram .widget-title h3,
+#contactFormWrapper h2,
+.content-blog .list-blog h3,
+#add-comment-title,
+.title-comment,
+#email-modal .window-window .window-content .title,
+.widget-title fieldset.box-title legend,
+.collection-title h3.h5 {
+	font-size: 21px
+}
+
+.refined-widgets>span,
+.site-nav>li>a,
+.header-top,
+.header-panel-bottom .free_shipping,
+#dropdown-cart .summary .label,
+#dropdown-cart .text-cart a,
+.page-header h2,
+.page-header h1,
+.banner h2,
+.banner-home-bottom .des h4,
+.widget-title h3,
+.free-shipping h3,
+.newsletter .block-title h3 span,
+#email-modal .window-window .window-content .title,
+.widget-new-product .widget-title h2,
+.collection-title a,
+.related-products h2,
+.recently-viewed-products h2,
+#shipping-calculator h3,
+#add-comment-title,
+.title-comment,
+.banner-home-top h4 span,
+.slide-heading,
+.footer-top h3,
+#contactFormWrapper h2,
+.contact-form .location h4,
+.content-blog .list-blog .button a,
+.widget-title fieldset.box-title legend,
+.product-label strong,
+.collection-title h3.h5,
+.nav-tabs,
+.tab-content .spr-form-title,
+.spr-summary-actions a,
+.cart-title h2,
+.cart-row .total-price h3,
+.cart-row label.add-comments span:first-child,
+.loading-modal,
+table.wishlist-product thead th,
+.template-customers-account .page-header h4,
+.template-customers-account .grid .grid-item p>a,
+.template-customers-addresses .grid .grid-item>p.button>a,
+.lookbook-slideshow .slide-des p:first-child,
+.btn,
+.btn-secondary,
+.text-continue a,
+#get-rates-submit,
+.infinite-scrolling a,
+.infinite-scrolling-homepage a,
+.panel-group .panel-title {
+	font-family: Tienne
+}
+
+body,
+table th,
+.toolbar button,
+.sidebar-custom .widget-title h3,
+.site-nav .widget-featured-product .widget-title h3,
+.site-nav .widget-featured-product .btn,
+.blog-detail .page-header h1 {
+	font-family: Martel
+}
+
+.quickview-button a {
+	font-family: Varela Round
+}
+
+.countdown span,
+.widget-tags li a,
+.user-tags li a,
+.lookbook .slide-text,
+.template-customers-account .grid .grid-item>h5,
+.template-customers-addresses .grid .grid-item>h3 {
+	font-family: Varela Round
+}
+
+.products-grid .product-des {
+	bottom: 0
+}
+
+.banner h2 {
+	color: #000
+}
+
+.banner p.line {
+	background: #000
+}
+
+.banner p {
+	color: #000
+}
+
+@media (max-width: 767px) {
+	.header-mobile {
+		position: fixed;
+		z-index: 1001;
+		background: #fff;
+		width: 66.66%
+	}
+
+	.header-bottom .top-header {
+		position: fixed;
+		z-index: 1001;
+		background: #fff;
+		width: 33.34%;
+		border-bottom: 1px solid #eee
+	}
+
+	.header-bottom #dropdown-cart {
+		width: 300%
+	}
+}
+
+@media (min-width: 768px) {
+	.template-collection .sidebar {
+		display: block !important
+	}
+}
+
+@media (max-width: 767px) {
+	.template-collection .sidebar {
+		display: none
+	}
+
+	.template-collection #displayTextLeft {
+		display: block
+	}
+}
+
+.template-product .sidebar {
+	display: none !important
+}
+
+.template-product .col-main {
+	width: 100% !important
+}
+
+@media (max-width: 767px) {
+	.template-product #displayTextLeft {
+		display: none
+	}
+}
+
+.countdown .quickview-clock,
+.countdown #clock {
+	font-family: Tienne;
+	font-size: 17px
+}
+
+/*# sourceMappingURL=/cdn/shop/t/9/assets/theme-styles-setting.css.map?v=30979245193126664901696366520 */
