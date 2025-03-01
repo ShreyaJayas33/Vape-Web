@@ -980,3 +980,153 @@ body.details-page .product-details {
 }
 
 /* ************************************************************************************ */
+/*********** Shopping Cart Page ***********/
+.cart-container {
+    max-width: 900px;
+    margin: 100px auto 50px; /* Ensure space below the nav */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cart-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Cart Item Styling */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-image {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.cart-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.cart-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.cart-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    margin: 5px 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Remove Button */
+.remove-item {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-item:hover {
+    background: #cc0000;
+}
+
+/* Cart Summary */
+.cart-summary {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.cart-summary p {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background: #388e3c;
+}
+
+
+/*********** Floating Cart Button ***********/
+.cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button:hover {
+    background: #388e3c;
+}
+
+.cart-button i {
+    font-size: 1.2rem;
+}
+
+#cart-count {
+    background: red;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

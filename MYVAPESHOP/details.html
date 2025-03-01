@@ -9,9 +9,9 @@
     - Fetches product details from JavaScript (`details.js`).
     - Ensures a structured layout for product images and specifications.
     - Provides an "Add to Cart" button for potential e-commerce functionality.
+    - Displays a "View Cart" button inside the product section.
     - Prevents content overlap with the navigation bar.
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
     <script src="search.js" defer></script>
     <script src="details.js" defer></script>
-
 </head>
-<body class = "details-page">
+<body class="details-page">
+
     <header>
         <nav>
             <div class="logo">
@@ -37,7 +37,7 @@
                 <a href="#gamercards" class="nav-item">About Us</a>
                 <a href="#leaderboard" class="nav-item">Blog</a>
                 <a href="#reviews" class="nav-item">Contact Us</a>
-                
+                <a href="cart.html" class="nav-item cart-link">Cart</a>
             </div>
             <div class="auth-links">
                 <a href="#" id="search-button" class="search-toggle"><i class="fas fa-search"></i></a>
@@ -47,10 +47,8 @@
                 <input type="text" id="search-input" placeholder="Start typing to search the site...">
                 <button id="clear-search">✖</button>
             </div>
-            
         </nav>
     </header>
-
 
     <section class="product-details">
         <div class="details-container">
@@ -63,9 +61,21 @@
                 <p id="product-description">Product Description</p>
                 <p id="product-material">Material: TBD</p>
                 <p id="product-dimensions">Dimensions: TBD</p>
-                <button class="add-to-cart">Add to Cart</button>
+
+                <!-- Quantity Selector and Buttons -->
+                <div class="cart-controls">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button class="add-to-cart">Add to Cart</button>
+                    
+                    <!-- View Cart Button (Placed Inside Product Section) -->
+                    <a href="cart.html" class="view-cart-btn">
+                        <i class="fas fa-shopping-cart"></i> View Cart (<span id="cart-count">0</span>)
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+
 </body>
 </html>
