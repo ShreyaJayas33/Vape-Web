@@ -1,0 +1,48 @@
+<!-- 
+    cart.html - Shopping Cart Page
+    -----------------------------------
+    This page displays all products added to the cart.
+    It allows users to update quantities, remove items, and proceed to checkout.
+
+    Scope:
+    - Displays cart items with name, image, price, and quantity field.
+    - Calculates total cost including tax and fees.
+    - Provides a checkout button.
+    - Uses `localStorage` to store cart items across sessions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="cart.js" defer></script>
+</head>
+<body class="cart-page">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="nav-logo"><span>CLOUD HAVEN</span></a>
+                <a href="products.html" class="nav-item">Products</a>
+                <a href="brands.html" class="nav-item">Brands</a>
+                <a href="cart.html" class="nav-item active">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cart-container">
+        <h1>Your Shopping Cart</h1>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+            <p><strong>Tax (6.75%):</strong> $<span id="tax">0.00</span></p>
+            <p><strong>Delivery Fee:</strong> $<span id="delivery-fee">0.00</span></p>
+            <p><strong>Service Fee:</strong> $<span id="service-fee">0.00</span></p>
+            <p><strong>Total:</strong> $<span id="total">0.00</span></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+</body>
+</html>

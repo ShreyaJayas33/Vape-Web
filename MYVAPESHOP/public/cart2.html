@@ -1,0 +1,97 @@
+<!-- 
+    cart.html - Shopping Cart Page
+    -----------------------------------
+    This page displays all products added to the cart.
+    It allows users to update quantities, remove items, and proceed to checkout.
+
+    Scope:
+    - Displays cart items with name, image, price, and quantity field.
+    - Calculates total cost including tax and fees.
+    - Provides a checkout button.
+    - Uses `localStorage` to store cart items across sessions.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <script src="cart.js" defer></script>
+</head>
+<body class="cart-page">
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html" class="nav-logo"><span>CLOUD HAVEN</span></a>
+        <a href="products.html" class="nav-item">Products</a>
+        <a href="brands.html" class="nav-item">Brands</a>
+        <a href="#gamercards" class="nav-item">About Us</a>
+        <a href="#leaderboard" class="nav-item">Blog</a>
+        <a href="#reviews" class="nav-item">Contact Us</a>
+        <a href="cart2.html" class="nav-item active"><i class="fas fa-shopping-cart"></i> Cart</a>
+      </div>
+      <div class="auth-links">
+        <a href="#" id="search-button" class="search-toggle"><i class="fas fa-search"></i></a>
+        <a href="#signup" class="signup">Sign Up / Log In</a>
+      </div>
+      <div id="search-box" class="hidden">
+        <input type="text" id="search-input" placeholder="Start typing to search the site...">
+        <button id="clear-search">✖</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="cart-container">
+    <h1>Your Shopping Cart</h1>
+
+    <!-- Cart Item 1 -->
+    <div class="cart-item">
+      <img src="images/F1.webp" alt="Product 1" class="product-image">
+      <div class="cart-details">
+        <p class="cart-name">Aztec Retro Rainbow Beaker Bong</p>
+        <p class="cart-price">$39.99</p>
+        <label>Qty: <input type="number" value="1" min="1" class="cart-qty-input"></label>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <div class="item-total">$39.99</div>
+    </div>
+
+    <!-- Cart Item 2 -->
+    <div class="cart-item">
+      <img src="images/F2.webp" alt="Product 2" class="product-image">
+      <div class="cart-details">
+        <p class="cart-name">8-Arm Tree Perc Bubbler Rig</p>
+        <p class="cart-price">$49.99</p>
+        <label>Qty: <input type="number" value="2" min="1" class="cart-qty-input"></label>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <div class="item-total">$99.98</div>
+    </div>
+
+    <!-- Cart Item 3 -->
+    <div class="cart-item">
+      <img src="images/F3.webp" alt="Product 3" class="product-image">
+      <div class="cart-details">
+        <p class="cart-name">Classic Beaker Bong</p>
+        <p class="cart-price">$69.99</p>
+        <label>Qty: <input type="number" value="1" min="1" class="cart-qty-input"></label>
+        <button class="remove-btn">Remove</button>
+      </div>
+      <div class="item-total">$69.99</div>
+    </div>
+
+    <div class="cart-summary">
+      <p><strong>Subtotal:</strong> $<span id="subtotal">209.96</span></p>
+      <p><strong>Tax (6.75%):</strong> $<span id="tax">14.17</span></p>
+      <p><strong>Delivery Fee:</strong> $<span id="delivery-fee">5.00</span></p>
+      <p><strong>Service Fee:</strong> $<span id="service-fee">0.00</span></p>
+      <p><strong>Total:</strong> $<span id="total">229.13</span></p>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </section>
+</body>
+</html>

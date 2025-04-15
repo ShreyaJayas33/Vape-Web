@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Edit Products</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-page">
+
+  <header>
+    <h1>Admin - Edit Products</h1>
+    <nav>
+      <a href="index.html" class="nav-logo"><span>CLOUD HAVEN</span></a>
+      <a href="admin-upload.html">Bulk Upload</a> |
+      <a href="admin-products.html">Manage Products</a> |
+      <a href="admin-edit.html">Edit Product</a>
+      <a href="index.html" class="logout-link">Log Out</a>
+    </nav>
+  </header>
+
+  <section class="edit-products-wrapper">
+    <h2>Edit Existing Products</h2>
+    <div class="edit-products-table-container">
+      <table class="edit-products-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Image Path</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Save</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" value="101" disabled></td>
+            <td><input type="text" value="images/product.jpg"></td>
+            <td><input type="text" value="Aztec Retro Bong"></td>
+            <td><input type="number" value="39.99"></td>
+            <td><input type="text" value="Bongs"></td>
+            <td><input type="text" value="Colorful retro beaker bong."></td>
+            <td><button class="save-btn">Save</button></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="102" disabled></td>
+            <td><input type="text" value="images/product2.jpg"></td>
+            <td><input type="text" value="Tree Perc Bubbler"></td>
+            <td><input type="number" value="49.99"></td>
+            <td><input type="text" value="Bubblers"></td>
+            <td><input type="text" value="8-arm tree perc bubbler rig."></td>
+            <td><button class="save-btn">Save</button></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="103" disabled></td>
+            <td><input type="text" value="images/F3.webp"></td>
+            <td><input type="text" value="Classic Beaker Bong"></td>
+            <td><input type="number" value="69.99"></td>
+            <td><input type="text" value="Bongs"></td>
+            <td><input type="text" value="7mm Color Accent Classic Bong"></td>
+            <td><button class="save-btn">Save</button></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="104" disabled></td>
+            <td><input type="text" value="images/F4.webp"></td>
+            <td><input type="text" value="Tsunami Glass Beaker"></td>
+            <td><input type="number" value="75.00"></td>
+            <td><input type="text" value="Bongs"></td>
+            <td><input type="text" value="Beaker Base Ice Catcher Water Pipe"></td>
+            <td><button class="save-btn">Save</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</body>
+</html>

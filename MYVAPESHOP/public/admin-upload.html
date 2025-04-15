@@ -1,0 +1,65 @@
+<!--  
+    admin-upload.html - Bulk Upload Page for Admins  
+    -----------------------------------
+    This page allows admins to upload product data in JSON, CSV, or TXT format.  
+    The uploaded file will be processed and added to the database.  
+    Admins must follow the provided file format to ensure correct data entry.  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Bulk Upload</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-page">
+  <header>
+    <h1>Admin - Bulk Upload Products</h1>
+    <nav>
+      <a href="index.html" class="nav-logo"><span>CLOUD HAVEN</span></a>
+      <a href="admin-upload.html">Bulk Upload</a> |
+      <a href="admin-products.html">Manage Products</a> |
+      <a href="admin-edit.html">Edit Product</a>
+      <a href="index.html" class="logout-link">Log Out</a>
+    </nav>
+  </header>
+
+  <section class="upload-container">
+    <h2>Upload Product Data</h2>
+    <p>Accepted formats: <strong>.json</strong>, <strong>.csv</strong>, <strong>.txt</strong></p>
+
+    <form id="upload-form">
+      <label for="file-upload">Select File:</label>
+      <input type="file" id="file-upload" accept=".json, .csv, .txt" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>Example File Format (JSON)</h3>
+    <pre>
+[
+  {
+    "id": 101,
+    "name": "Aztec Retro Bong",
+    "price": 39.99,
+    "description": "Colorful retro beaker bong.",
+    "category": "Bongs",
+    "image": "images/bong1.webp"
+  },
+  {
+    "id": 102,
+    "name": "Tree Perc Bubbler",
+    "price": 49.99,
+    "description": "8-arm tree perc bubbler rig.",
+    "category": "Bubblers",
+    "image": "images/bubbler1.webp"
+  }
+]
+    </pre>
+  </section>
+
+  <script src="admin-upload.js"></script>
+</body>
+</html>

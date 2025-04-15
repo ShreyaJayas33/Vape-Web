@@ -1,0 +1,122 @@
+<!--   
+    admin-products.html - Product Management Page  
+    -----------------------------------
+    This page lists all products in the database.  
+    Admins can edit, delete, add, or archive products.  
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Manage Products</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-page">
+
+  <header>
+    <h1>Admin - Manage Products</h1>
+    <nav>
+      <a href="index.html" class="nav-logo"><span>CLOUD HAVEN</span></a>
+      <a href="admin-upload.html">Bulk Upload</a> |
+      <a href="admin-products.html">Manage Products</a> |
+      <a href="admin-edit.html">Edit Product</a>
+      <a href="index.html" class="logout-link">Log Out</a>
+    </nav>
+  </header>
+
+  <section class="product-list">
+    <h2>Product Listing</h2>
+    <input type="text" placeholder="Search by name or category" id="search-box" />
+    <button id="open-modal-btn" class="add-btn">➕ Add New Product</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="product-table">
+        <tr>
+          <td>101</td>
+          <td><img src="images/product.jpg" alt="Aztec Retro Bong" width="50" /></td>
+          <td>Aztec Retro Bong</td>
+          <td>$39.99</td>
+          <td>Bongs</td>
+          <td>Colorful retro beaker bong.</td>
+          <td><button>Edit</button><button>Archive</button><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td><img src="images/product2.jpg" alt="Tree Perc Bubbler" width="50" /></td>
+          <td>Tree Perc Bubbler</td>
+          <td>$49.99</td>
+          <td>Bubblers</td>
+          <td>8-arm tree perc bubbler rig.</td>
+          <td><button>Edit</button><button>Archive</button><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td><img src="images/F3.webp" alt="Classic Beaker Bong" width="50" /></td>
+          <td>Classic Beaker Bong</td>
+          <td>$69.99</td>
+          <td>Bongs</td>
+          <td>7mm Color Accent Classic Beaker Bong (12")</td>
+          <td><button>Edit</button><button>Archive</button><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>104</td>
+          <td><img src="images/F4.webp" alt="Tsunami Glass Beaker" width="50" /></td>
+          <td>Tsunami Glass Beaker</td>
+          <td>$75.00</td>
+          <td>Bongs</td>
+          <td>Beaker Base Ice Catcher Water Pipe (15")</td>
+          <td><button>Edit</button><button>Archive</button><button>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Modal Form -->
+  <div id="product-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal-btn">&times;</span>
+      <h2>Add New Product</h2>
+      <form id="new-product-form">
+        <label>Product ID:
+          <input type="number" id="new-id" required />
+        </label>
+        <label>Image URL:
+          <input type="text" id="new-image" placeholder="images/example.jpg" required />
+        </label>
+        <label>Name:
+          <input type="text" id="new-name" required />
+        </label>
+        <label>Price:
+          <input type="number" step="0.01" id="new-price" required />
+        </label>
+        <label>Category:
+          <input type="text" id="new-category" required />
+        </label>
+        <label>Description:
+          <textarea id="new-description" rows="3" required></textarea>
+        </label>
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal overlay -->
+  <div id="modal-overlay" class="overlay hidden"></div>
+
+  <script src="admin-products.js" defer></script>
+</body>
+</html>
