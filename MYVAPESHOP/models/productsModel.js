@@ -30,9 +30,21 @@ const getProductsByCategory = async (categoryId) => {
   return result.rows;
 };
 
+// ✅ Add a new product
+const addProduct = async ({ name, description, price, category_id, image_path }) => {
+  const result = await pool.query(
+    `INSERT INTO products (name, description, price, category_id, image_path)
+     VALUES ($1, $2, $3, $4, $5)
+     RETURNING *`,
+    [name, description, price, category_id, image_path]
+  );
+  return result.rows[0];
+};
+
 module.exports = {
   getAllProducts,
   getProductById,
   searchProducts,
   getProductsByCategory,
+  addProduct, // ✅ newly added
 };

@@ -53,3 +53,5 @@ app.use("/api/admin", adminRoutes);
 app.listen(PORT, () => {
   console.log(`🌐 Server is listening on http://localhost:${PORT}`);
 });
+
+console.log("✅ DB user from .env:", process.env.DB_USER);
