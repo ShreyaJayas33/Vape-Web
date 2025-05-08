@@ -1,4 +1,5 @@
 # Vape Web Backend
+# Note: Please scroll all the way down to check final project deliverable section.
 
 This is the backend service for the Vape Web full stack project. It powers the product catalog, cart system, and admin dashboard functionality.
 
@@ -98,3 +99,60 @@ http://localhost:5055
 ## 📄 License
 
 This project is part of the UNCG Full Stack Web Development coursework. Created by **Shreya Jayas**.
+
+# Final-Project Deliverable 
+## Taken steps according to project description. 
+
+# 🌬️ Vape Web — A little Overview
+
+This project is a multi-view rendering demo for a vape e-commerce platform. It covers:
+
+- ✅ Client-Side Rendering (with `fetch()`)
+- ✅ Server-Side Rendering using EJS
+- ✅ Server-Side Rendering using Pug
+- ✅ Client-Side Rendering using React + Axios
+
+---
+
+## ✅ Step 1: Client-Side Rendering with JavaScript (`fetch()`)
+
+### 🔧 Features Implemented
+- JS files: `products.js`, `details.js` added to public HTML.
+- Data is dynamically loaded via `fetch("/api/products/json")`.
+- DOM is populated via JavaScript on page load.
+- Console debug logs confirm successful data fetch.
+
+### 📄 HTML View
+- `products.html` and `details.html` use vanilla JS to fetch and populate content.
+
+### 🔍 How to Test
+- Open `public/products.html` or `public/details.html` in browser.
+- Check console: You should see "✅ Products from backend".
+
+---
+
+## ✅ Step 2: Server-Side Rendering with EJS
+
+### 🔧 Features Implemented
+- Views located in `/views`
+- HTML files converted to `.ejs` (e.g., `products.ejs`, `details.ejs`)
+- Controller uses `res.render("products", { products })` for SSR.
+- Hardcoded HTML replaced with EJS syntax (`<%= product.name %>` etc.)
+
+### 🔍 How to Test
+- Visit: [http://localhost:5055/api/products](http://localhost:5055/api/products)
+- Page renders with live database content.
+- Inspect source: dynamic values embedded directly into the HTML.
+
+---
+
+## ✅ Step 3: Server-Side Rendering with Pug
+
+### 🔧 Features Implemented
+- Views located in `/views-pug`
+- Pug templates created from scratch
+- Express is configured with:
+  ```js
+  app.set("view engine", "pug");
+  app.set("views", path.join(__dirname, "views-pug"));
+
