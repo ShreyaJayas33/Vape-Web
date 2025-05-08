@@ -157,7 +157,7 @@ This project is a multi-view rendering demo for a vape e-commerce platform. It c
 - Controller passes both `products` and `galleryItems` into Pug view
 - Fixed inline `const` syntax error in `.pug` by moving data to controller
 
-## 🛠 Debug Fix Highlights
+### 🛠 Debug Fix Highlights
 - ❌ Pug cannot define const inline — this caused `SyntaxError`.
 - ✅ Moved `galleryItems` into the controller.
 - ✅ Template now uses:
@@ -168,7 +168,7 @@ each item in galleryItems
     p= item
 ```
 
-## 🔍 How to Test
+### 🔍 How to Test
 Visit: [http://localhost:5055/api/products/pug]
 - Confirm Pug SSR layout and gallery grid.
 ---
@@ -184,7 +184,7 @@ Visit: [http://localhost:5055/api/products/pug]
 - Moved React app inside main project folder without submodule conflict.
 - Added `.gitignore` to ignore `node_modules`.
 
-## 🔍 How to Test
+### 🔍 How to Test
 - Run backend: `node server.js`
 - Start React: `npm start` inside myvapeshop-react
 - Visit: [http://localhost:3000]
