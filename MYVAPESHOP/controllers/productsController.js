@@ -64,7 +64,7 @@ const createProduct = async (req, res) => {
       return res.status(400).json({ error: "Invalid category ID" });
     }
 
-    const image_path = "images/default.jpg"; // You can update this later
+    const image_path = req.body.image_path || "images/default.jpg";
     const result = await model.addProduct({ name, description, price, category_id, image_path });
     res.status(201).json({ success: true, product: result });
   } catch (err) {
