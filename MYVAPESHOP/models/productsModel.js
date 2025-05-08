@@ -6,13 +6,11 @@ const getAllProducts = async () => {
   return result.rows;
 };
 
-// ✅ Get one product by ID
 const getProductById = async (id) => {
   const result = await pool.query("SELECT * FROM products WHERE product_id = $1", [id]);
   return result.rows[0];
 };
 
-// ✅ Search products by name or description
 const searchProducts = async (query) => {
   const result = await pool.query(
     "SELECT * FROM products WHERE name ILIKE $1 OR description ILIKE $1",
@@ -21,7 +19,6 @@ const searchProducts = async (query) => {
   return result.rows;
 };
 
-// ✅ Filter products by category ID
 const getProductsByCategory = async (categoryId) => {
   const result = await pool.query(
     "SELECT * FROM products WHERE category_id = $1",
@@ -30,7 +27,6 @@ const getProductsByCategory = async (categoryId) => {
   return result.rows;
 };
 
-// ✅ Add a new product
 const addProduct = async ({ name, description, price, category_id, image_path }) => {
   const result = await pool.query(
     `INSERT INTO products (name, description, price, category_id, image_path)
@@ -46,5 +42,5 @@ module.exports = {
   getProductById,
   searchProducts,
   getProductsByCategory,
-  addProduct, // ✅ newly added
+  addProduct,
 };

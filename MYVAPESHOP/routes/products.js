@@ -7,10 +7,12 @@ router.get("/search", controller.search);
 router.get("/category/:category_id", controller.filterByCategory);
 
 // ✅ Add product (important for Postman test)
-router.post("/", controller.createProduct);  //added line!
+router.post("/", controller.createProduct);
 
-// 📦 Product views
+// ✅ Product Views
+router.get("/json", controller.getAllJSON); // ✅ MUST be above `/:id`
+router.get("/pug", controller.getAllPug);
 router.get("/", controller.getAll);
-router.get("/:id", controller.getOne);
+router.get("/:id", controller.getOne); // 🔴 Keep this LAST
 
 module.exports = router;

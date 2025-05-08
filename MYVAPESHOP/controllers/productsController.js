@@ -1,15 +1,47 @@
 const model = require("../models/productsModel");
 
-// ✅ Controller: Get all products
+// ✅ JSON for static HTML fetch (Step 2)
+const getAllJSON = async (req, res) => {
+  try {
+    const data = await model.getAllProducts();
+    res.json(data); // ✅ Must return JSON for products.html
+  } catch (err) {
+    console.error("❌ JSON fetch error:", err.message);
+    res.status(500).json({ error: "Failed to load products" });
+  }
+};
+
+// ✅ EJS view (Step 2 - server-rendered)
 const getAll = async (req, res) => {
   try {
     const data = await model.getAllProducts();
-    // res.json(data); // ❌ removed for step 2 (project)
-    res.render("products", { products: data }); // ✅ part added for step 2 (project)
+    res.render("products", { products: data });
   } catch (err) {
     console.error("❌ Error getting all products:", err.message);
-    // res.status(500).json({ error: "Error fetching products" }); // ❌ removed for step 2 (project)
-    res.status(500).send("Error loading products page"); // ✅ part added for step 2 (project)
+    res.status(500).send("Error loading products page");
+  }
+};
+
+// ✅ Pug view (Step 3)
+const getAllPug = async (req, res) => {
+  try {
+    console.log("🛠️ [PUG] Controller hit: getAllPug");
+    const data = await model.getAllProducts();
+    console.log("📦 [PUG] Fetched products from DB:", data.length);
+
+    const galleryItems = [
+      "WHAT'S NEW!", "PRODUCTS UNDER $100", "BONGS", "DAB RIGS",
+      "HEADY AMERICAN GLASS", "HAND PIPES", "BUBBLERS / SHERLOCKS",
+      "BANGERS / NAILS", "BOWLS / SLIDES", "GRINDERS",
+      "BUBBLE CAPS & CARBS", "PENDANTS AND JEWELRY", "MARBLES & PEARLS",
+      "DABBING TORCHES", "DAB TOOLS", "DOWNSTEMS", "ASH CATCHERS",
+      "SILICONE", "CERAMICS", "NECTAR COLLECTORS"
+    ];
+
+    res.render("products", { products: data, galleryItems });
+  } catch (err) {
+    console.error("❌ Error rendering Pug view:", err.message);
+    res.status(500).send("Error loading products page");
   }
 };
 
@@ -50,17 +82,14 @@ const filterByCategory = async (req, res) => {
   }
 };
 
-// ✅ Controller: Add a new product (used with Postman)
+// ✅ Controller: Add a new product
 const createProduct = async (req, res) => {
   try {
     const { name, description, price, category_id } = req.body;
-
-    // Basic validation
     if (!name || !description || !price || !category_id) {
       return res.status(400).json({ error: "Missing required product fields" });
     }
 
-    // Only allow category IDs that actually exist (based on your DB)
     const validCategories = [1, 2];
     if (!validCategories.includes(parseInt(category_id))) {
       return res.status(400).json({ error: "Invalid category ID" });
@@ -76,7 +105,9 @@ const createProduct = async (req, res) => {
 };
 
 module.exports = {
-  getAll,
+  getAllJSON,       // ✅ new: JSON for HTML
+  getAll,           // ✅ EJS
+  getAllPug,        // ✅ Pug
   getOne,
   search,
   filterByCategory,

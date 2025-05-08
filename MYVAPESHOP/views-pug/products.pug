@@ -1,0 +1,67 @@
+//- views-pug/products.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Products Gallery
+    link(rel="stylesheet", href="/styles.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css")
+    link(href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani:wght@400;700&display=swap", rel="stylesheet")
+    script(src="/search.js", defer)
+
+  body
+    header
+      nav
+        .logo
+          a.nav-logo(href="/") CLOUD HAVEN
+          a.nav-item(href="/products") Products
+          a.nav-item(href="/brands") Brands
+          a.nav-item(href="#gamercards") About Us
+          a.nav-item(href="#leaderboard") Blog
+          a.nav-item(href="#reviews") Contact Us
+        .auth-links
+          a.search-toggle(href="#", id="search-button")
+            i.fas.fa-search
+          a.signup(href="#signup") Sign Up / Log In
+        #search-box.hidden
+          input#search-input(type="text", placeholder="Start typing to search the site...")
+          button#clear-search ✖
+
+    section.controls
+      .filters
+        label(for="sort") Sort by:
+        select#sort
+          option(value="popularity") Popularity
+          option(value="priceLowToHigh") Price: Low to High
+          option(value="priceHighToLow") Price: High to Low
+          option(value="newArrivals") New Arrivals
+      .search
+        input#product-search(type="text", placeholder="Search for products...")
+        button#search-btn(type="button")
+          i.fas.fa-search
+
+    section.products-list
+      if products.length === 0
+        h2 No products available.
+      else
+        each product in products
+          .product-card
+            a(href=`/details/${product.product_id}`)
+              img(src=`/${product.image_path}`, alt=product.name)
+            h2.product-name= product.name
+            p.price $#{product.price}
+            a.details-link(href=`/details/${product.product_id}`) View Details
+
+    section.pagination
+      button.prev-page &laquo; Previous
+      button.next-page Next &raquo;
+
+    section.products-gallery
+      h1 Gallery
+      .gallery-grid
+        each item in galleryItems
+          .gallery-item
+            img(src="https://via.placeholder.com/200", alt=item)
+            p= item

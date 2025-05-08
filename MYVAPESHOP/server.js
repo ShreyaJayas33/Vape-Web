@@ -1,21 +1,27 @@
-require("dotenv").config();              // ✅ Loads environment variables 
-const express = require("express");      // ✅ Express for web server
-const cors = require("cors");            // ✅ Enables CORS
-const multer = require("multer");        // ✅ (Ready for file uploads)
-const { Pool } = require("pg");          // ✅ PostgreSQL client
-const path = require("path");            // step added for step 2 (project)
+require("dotenv").config(); // ✅ Loads environment variables
+const express = require("express");
+const cors = require("cors");
+const multer = require("multer");
+const { Pool } = require("pg");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 5055;
 
-// ✅ View Engine Setup
-app.set("view engine", "ejs");           // step added for step 2 (project)
-app.set("views", path.join(__dirname, "views")); // step added for step 2 (project)
+// ✅ View Engine Support for BOTH EJS (Step 2) and Pug (Step 3)
+app.engine("ejs", require("ejs").__express);
+app.engine("pug", require("pug").__express);
+app.set("views", [
+  path.join(__dirname, "views"),      // EJS Views
+  path.join(__dirname, "views-pug")   // Pug Views
+]);
+app.set("view engine", "ejs"); // Default view engine (won't break step 2)
+console.log("✅ Views set to:", app.get("views"));
 
-// ✅ Middlewares
+// ✅ Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));       // ✅ Serves files from /public
+app.use(express.static("public"));
 
 // ✅ PostgreSQL Pool Setup
 const pool = new Pool({
@@ -35,27 +41,24 @@ pool.connect((err, client, release) => {
   release();
 });
 
-// ✅ Root Route
+// ✅ Root route
 app.get("/", (req, res) => {
   res.send("🚀 Vape Web backend is running on port " + PORT);
 });
 
-// ✅ API Routes
+// ✅ Route registration
 const testRoutes = require("./routes/testRoutes");
-app.use("/api", testRoutes);
-
 const productRoutes = require("./routes/products");
-app.use("/api/products", productRoutes);
-
 const cartRoutes = require("./routes/cart");
-app.use("/api/cart", cartRoutes);
-
 const adminRoutes = require("./routes/admin");
-app.use("/api/admin", adminRoutes);
 
-// ✅ Start Server
+if (testRoutes) app.use("/api", testRoutes);
+if (productRoutes) app.use("/api/products", productRoutes);
+if (cartRoutes) app.use("/api/cart", cartRoutes);
+if (adminRoutes) app.use("/api/admin", adminRoutes);
+
+// ✅ Start server
 app.listen(PORT, () => {
   console.log(`🌐 Server is listening on http://localhost:${PORT}`);
 });
-
 console.log("✅ DB user from .env:", process.env.DB_USER);
