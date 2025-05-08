@@ -1,11 +1,16 @@
-require("dotenv").config();              // ✅ Loads environment variables
+require("dotenv").config();              // ✅ Loads environment variables 
 const express = require("express");      // ✅ Express for web server
 const cors = require("cors");            // ✅ Enables CORS
 const multer = require("multer");        // ✅ (Ready for file uploads)
 const { Pool } = require("pg");          // ✅ PostgreSQL client
+const path = require("path");            // step added for step 2 (project)
 
 const app = express();
 const PORT = process.env.PORT || 5055;
+
+// ✅ View Engine Setup
+app.set("view engine", "ejs");           // step added for step 2 (project)
+app.set("views", path.join(__dirname, "views")); // step added for step 2 (project)
 
 // ✅ Middlewares
 app.use(cors());
@@ -47,7 +52,6 @@ app.use("/api/cart", cartRoutes);
 
 const adminRoutes = require("./routes/admin");
 app.use("/api/admin", adminRoutes);
-
 
 // ✅ Start Server
 app.listen(PORT, () => {

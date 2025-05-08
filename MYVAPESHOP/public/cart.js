@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.getElementById("cart-items");
     const subtotalElement = document.getElementById("subtotal");
     const taxElement = document.getElementById("tax");
+    const deliveryFeeElement = document.getElementById("delivery-fee"); // added
+    const serviceFeeElement = document.getElementById("service-fee");   // added
     const totalElement = document.getElementById("total");
-    
+
+    const DELIVERY_FEE = 4.99; // step added for delivery fee
+    const SERVICE_FEE = 2.50;  // step added for service fee
+
     function updateCart() {
         cartContainer.innerHTML = "";
         let subtotal = 0;
@@ -30,10 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const tax = subtotal * 0.0675;
-        const total = subtotal + tax;
-        
+        const total = subtotal + tax + DELIVERY_FEE + SERVICE_FEE;
+
         subtotalElement.textContent = subtotal.toFixed(2);
         taxElement.textContent = tax.toFixed(2);
+        deliveryFeeElement.textContent = DELIVERY_FEE.toFixed(2);  // added
+        serviceFeeElement.textContent = SERVICE_FEE.toFixed(2);    // added
         totalElement.textContent = total.toFixed(2);
 
         localStorage.setItem("cart", JSON.stringify(cart));

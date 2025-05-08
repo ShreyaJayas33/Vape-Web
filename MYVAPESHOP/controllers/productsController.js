@@ -4,10 +4,12 @@ const model = require("../models/productsModel");
 const getAll = async (req, res) => {
   try {
     const data = await model.getAllProducts();
-    res.json(data);
+    // res.json(data); // ❌ removed for step 2 (project)
+    res.render("products", { products: data }); // ✅ part added for step 2 (project)
   } catch (err) {
     console.error("❌ Error getting all products:", err.message);
-    res.status(500).json({ error: "Error fetching products" });
+    // res.status(500).json({ error: "Error fetching products" }); // ❌ removed for step 2 (project)
+    res.status(500).send("Error loading products page"); // ✅ part added for step 2 (project)
   }
 };
 
