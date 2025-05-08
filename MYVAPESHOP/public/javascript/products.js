@@ -1,4 +1,12 @@
 // public/javascript/product.js
+/**
+ * Name: Shreya Jayas
+ * Date: 05.08.2025
+ * CSC 372-01
+ *
+ * This is the frontend JavaScript for loading products on the products page.
+ * It fetches data from the backend and renders product cards dynamically.
+ */
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {

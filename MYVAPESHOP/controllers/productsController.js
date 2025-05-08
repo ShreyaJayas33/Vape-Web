@@ -1,3 +1,12 @@
+/**
+ * Name: Shreya Jayas
+ * Date: 05.08.2025
+ * CSC 372-01
+ *
+ * This controller handles product-related routes in the Vape Web project.
+ * It includes logic to render EJS views and return API responses for product data.
+ */
+
 const model = require("../models/productsModel");
 
 // ✅ JSON for static HTML fetch (Step 2)
