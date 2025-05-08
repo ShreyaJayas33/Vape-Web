@@ -1,11 +1,11 @@
 # MYVAPESHOP
-# Note: Please scroll all the way down to check final project deliverable section. Video walkthrough of my work has been added in this directory.
+# Note: Please scroll down to check the final project deliverable section. A video walkthrough of my work has been added to this directory.
 [![Watch the video](https://img.youtube.com/vi/AA8CFZpZ0a8/maxresdefault.jpg)](https://youtu.be/AA8CFZpZ0a8)
 
 ### [Watch this video on YouTube](https://youtu.be/AA8CFZpZ0a8)
 ---
 ## Before final project section!!
-This is the backend service for the Vape Web full stack project. It powers the product catalog, cart system, and admin dashboard functionality.
+This is the backend service for the Vape Web full-stack project. It powers the product catalog, cart system, and admin dashboard functionality.
 
 ## 🛠️ Technologies Used
 
