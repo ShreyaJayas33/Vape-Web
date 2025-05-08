@@ -145,7 +145,6 @@ This project is a multi-view rendering demo for a vape e-commerce platform. It c
 - Inspect source: dynamic values embedded directly into the HTML.
 
 ---
-
 ## ✅ Step 3: Server-Side Rendering with Pug
 
 ### 🔧 Features Implemented
@@ -155,4 +154,51 @@ This project is a multi-view rendering demo for a vape e-commerce platform. It c
   ```js
   app.set("view engine", "pug");
   app.set("views", path.join(__dirname, "views-pug"));
+- Controller passes both `products` and `galleryItems` into Pug view
+- Fixed inline `const` syntax error in `.pug` by moving data to controller
 
+## 🛠 Debug Fix Highlights
+- ❌ Pug cannot define const inline — this caused `SyntaxError`.
+- ✅ Moved `galleryItems` into the controller.
+- ✅ Template now uses:
+```
+each item in galleryItems
+  .gallery-item
+    img(src="...", alt=item)
+    p= item
+```
+
+## 🔍 How to Test
+Visit: [http://localhost:5055/api/products/pug]
+- Confirm Pug SSR layout and gallery grid.
+---
+
+## ✅ Step 4: Client-Side Rendering with React + Axios
+### 🔧 Features Implemented
+- React app located in `/myvapeshop-react`
+- Uses axios to call `/api/products/json`
+- Functional component with `useEffect() + useState()`
+
+### 🛠 Fixes Done
+- Backend cors() enabled in Express.
+- Moved React app inside main project folder without submodule conflict.
+- Added `.gitignore` to ignore `node_modules`.
+
+## 🔍 How to Test
+- Run backend: `node server.js`
+- Start React: `npm start` inside myvapeshop-react
+- Visit: [http://localhost:3000]
+- Products render as a list with dynamic DB data.
+
+## Final Folder Structure 
+```
+├── MYVAPESHOP/               # Express + PostgreSQL backend
+├── myvapeshop-react/         # React frontend (no longer a submodule)
+├── views/                    # EJS templates
+├── views-pug/                # Pug templates
+├── public/                   # Static HTML & JS
+├── routes/
+├── controllers/
+├── models/
+
+```
