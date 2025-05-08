@@ -1,5 +1,7 @@
-# Vape Web Backend
-# Note: Please scroll all the way down to check final project deliverable section.
+# MYVAPESHOP
+# Note: Please scroll all the way down to check final project deliverable section. Video walkthrough of my work has been added in this directory.
+---
+## Before final project section!!
 
 This is the backend service for the Vape Web full stack project. It powers the product catalog, cart system, and admin dashboard functionality.
 
@@ -169,7 +171,7 @@ each item in galleryItems
 ```
 
 ### 🔍 How to Test
-Visit: [http://localhost:5055/api/products/pug]
+Visit: [http://localhost:5055/api/products/pug](http://localhost:5055/api/products/pug)
 - Confirm Pug SSR layout and gallery grid.
 ---
 
@@ -187,7 +189,7 @@ Visit: [http://localhost:5055/api/products/pug]
 ### 🔍 How to Test
 - Run backend: `node server.js`
 - Start React: `npm start` inside myvapeshop-react
-- Visit: [http://localhost:3000]
+- Visit: [http://localhost:3000](http://localhost:3000)
 - Products render as a list with dynamic DB data.
 
 ## Final Folder Structure 
